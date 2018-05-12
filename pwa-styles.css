@@ -37,18 +37,31 @@
           flex: 1; }
 
 body {
-    background-color: #FF9800;
+    background-color: #fff;
     color: black;
   }
-  .vertical-container {
-    height: 300px;
-    display: -webkit-flex;
-    display:         flex;
-    -webkit-align-items: center;
-            align-items: center;
-    -webkit-justify-content: center;
-            justify-content: center;
-  }
-  h1.vertical-container {
+  h1.article__title {
     font-size: 275%;
+    margin-top: 73px;
   }
+section.vertical-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+.vertical-container img.img__gift{
+  margin: 0 auto;
+    width: 170px;
+    display: block;
+    height: auto;
+    margin-bottom: 30px;
+}

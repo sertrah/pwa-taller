@@ -1,8 +1,10 @@
 var cacheName = 'pwa-pagina';
+var dataCacheName = 'chistes.v1';
 var filesToCache = [
   '/',
   '/index.html',
-  '/pwa-styles.css'
+  '/pwa-styles.css',
+  '/imagenes/giphy.gif'
 ];
 
 self.addEventListener('install', function (e) {
@@ -20,6 +22,7 @@ self.addEventListener('activate', function (e) {
   e.waitUntil(
     caches.keys().then(function (keyList) {
       return Promise.all(keyList.map(function (key) {
+        console.log('[asdasdasdad]',key);
         if (key !== cacheName && key !== dataCacheName) {
           console.log('[ServiceWorker] Removing old cache', key);
           return caches.delete(key);

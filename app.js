@@ -1,18 +1,13 @@
 (function () {
     'use strict';
     var initChiste = {
-        key: '',
-        mensaje: '',
-        icon: '',
+        key: '0',
+        mensaje: 'cargando chiste.',
+        icon_url: './imagenes/giphy.gif',
     };
     var app = {
         isLoading: true,
         chiste: {},
-        spinner: document.querySelector('.loader'),
-        cardTemplate: document.querySelector('.cardTemplate'),
-        container: document.querySelector('.main'),
-        addDialog: document.querySelector('.dialog-container'),
-        daysOfWeek: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
     };
     // ACCIONES DEL USUARIO
     document.getElementById('butRefresh').addEventListener('click', function () {
@@ -33,11 +28,11 @@
             caches.match(url).then(function (response) {
                 if (response) {
                     response.json().then(function updateFromCache(json) {
-                        var results = json.query.results;
+                        var results = json;
                         results['key'] = json.id;
                         results['mensaje'] = json.value;
-                        results['icon'] = json.icon_url;
-                        app.actualizarChiste(results);
+                        results['icon_url'] = json.icon_url;
+                        app.actualizarChisteDom(results);
                     });
                 }
             });
@@ -51,25 +46,27 @@
                     var results = response;
                     results['key'] = response.id;
                     results['mensaje'] = response.value;
-                    results['icon'] = response.icon_url;
-                    app.actualizarChiste(results);
+                    results['icon_url'] = response.icon_url;
+                    app.actualizarChisteDom(results);
+
                 }
             } else {
                 // En caso bad, retorna el estado inicial.
-                app.actualizarChiste(initChiste);
+                app.actualizarChisteDom(initChiste);
             }
         };
         request.open('GET', url);
         request.send();
     };
 
-    app.actualizarChiste = function (data) {
+    app.actualizarChisteDom = function (data) {
         document.querySelector('.id').textContent = data.id;
         document.querySelector('.mensaje').textContent = data.value;
-        document.querySelector('.imagen').textContent = data.icon_url;
-        console.log(data);
+        document.querySelector('.imagen').src = data.icon_url;
     }
-
+    app.actualizarChiste = function () {
+        app.obtenerChiste();
+    }
     // Guarda chistes en localStorage.
     app.guardarChiste = function () {
         var chiste = JSON.stringify(app.chiste);
@@ -89,10 +86,10 @@
         /* Si el usuario usa la app por primera vez, o el uusuario no a guardado chistes
         * Entonces muestre chiste temporal. 
         */
-       app.actualizarChiste(initChiste);
-       app.chiste = initChiste;
-       app.guardarChiste();
-       console.log('SETEO COSAS  COSAS OME');
+        app.actualizarChisteDom(initChiste);
+        app.chiste = initChiste;
+        app.guardarChiste();
+        console.log('SETEO COSAS  COSAS OME');
     }
     // Preguntamos al usuario si el navegador soporta Services Workers
     if ('serviceWorker' in navigator && 'PushManager' in window) {
