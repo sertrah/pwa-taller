@@ -3,11 +3,14 @@
     var initChiste = {
         key: '0',
         mensaje: 'cargando chiste.',
-        icon_url: './imagenes/giphy.gif',
+        icon_url: './imagenes/hellscream.gif',
     };
     var app = {
         isLoading: true,
         chiste: {},
+        spinner: document.querySelector('.loader__spinner'),
+        container: document.querySelector('.vertical-container'),
+
     };
     // ACCIONES DEL USUARIO
     document.getElementById('butRefresh').addEventListener('click', function () {
@@ -38,6 +41,8 @@
             });
         }
         // Fetch the latest data.
+        mostrarSpinner();
+
         var request = new XMLHttpRequest();
         request.onreadystatechange = function () {
             if (request.readyState === XMLHttpRequest.DONE) {
@@ -48,6 +53,8 @@
                     results['mensaje'] = response.value;
                     results['icon_url'] = response.icon_url;
                     app.actualizarChisteDom(results);
+                    app.chiste = results;
+                    app.guardarChiste();
 
                 }
             } else {
@@ -63,12 +70,24 @@
         document.querySelector('.id').textContent = data.id;
         document.querySelector('.mensaje').textContent = data.value;
         document.querySelector('.imagen').src = data.icon_url;
+        if (app.isLoading) {
+            app.spinner.setAttribute('hidden', true);
+            app.container.removeAttribute('hidden');
+            app.isLoading = false;
+        }
     }
     app.actualizarChiste = function () {
+        mostrarSpinner();
         app.obtenerChiste();
+    }
+    function mostrarSpinner() {
+        app.isLoading = true;
+        app.spinner.removeAttribute('hidden');
+
     }
     // Guarda chistes en localStorage.
     app.guardarChiste = function () {
+        localStorage.removeItem('chiste');
         var chiste = JSON.stringify(app.chiste);
         localStorage.chiste = chiste;
     };

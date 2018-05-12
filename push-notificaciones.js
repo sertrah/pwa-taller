@@ -9,6 +9,7 @@ var permisoParaNotificar = Notification.requestPermission(function (status) {
 function displayNotification() {
     if (Notification.permission == 'granted') {
         navigator.serviceWorker.getRegistration().then(function (reg) {
+            console.log(reg);
             reg.showNotification('Hello world!', {
                 body: 'Bizz! Bizz!',
                 icon: './imagenes/gato.jpg',

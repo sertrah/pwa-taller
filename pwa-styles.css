@@ -2,8 +2,8 @@
 .header {
   width: 100%;
   height: 56px;
-  color: #FFF;
-  background: #f44336;
+  color: #FFCDD2;
+  background: #D32F2F;
   top: 0;
   left: 0;
   position: fixed;
@@ -16,13 +16,13 @@
   z-index: 1000; }
   .header .headerButton {
     width: 24px;
-    height: 24px;
-    margin-right: 16px;
-    text-indent: -30000px;
-    overflow: hidden;
-    opacity: 0.54;
-    -webkit-transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
-    transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+    position: fixed;
+    top: 50%;
+    left: 0;
+    background: #9E9E9E;
+    border-radius: 0px 40px 40px 0px;
+    width: 100px;
+    height: 100px;
     border: none;
     outline: none;
     cursor: pointer; }
@@ -38,11 +38,13 @@
 
 body {
     background-color: #fff;
-    color: black;
+    font-family: 'Roboto', sans-serif;
   }
   h1.article__title {
     font-size: 275%;
     margin-top: 73px;
+    color: #FFCDD2;
+    padding: 0px 30px;
   }
 section.vertical-container{
   display: -webkit-box;
@@ -58,10 +60,64 @@ section.vertical-container{
   justify-content: center;
   text-align: center;
 }
+article{
+  background: #F44336;
+  color: #FFCDD2;
+}
 .vertical-container img.img__gift{
   margin: 0 auto;
     width: 170px;
     display: block;
     height: auto;
     margin-bottom: 30px;
+}
+.mensaje{
+  width: 350px;
+  margin: 0 auto;
+}
+
+.loader__spinner {
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); 
+          width: 200px;
+          height: 200px;}
+
+
+.ico__update {
+  border: 10px solid transparent;
+  border-top-color: #FFFFFF;
+  border-left-color: #FFFFFF;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: relative;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin: 16px auto;
+}
+.ico__update:before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 85%;
+  height: 0;
+  width: 0;
+  border-left: 15px solid #FFFFFF;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.ico__update:hover {
+  -webkit-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  transform: rotate(315deg);
+  transition: all 0.8s;
+  transition-timing-function: cubic-bezier(0.74, 0.15, 0.1, 0.76);
 }
