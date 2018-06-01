@@ -151,7 +151,6 @@ body {
     black, 
     transparent
   );
-  position: relative;  
 }
 
 .image_background > img{
@@ -166,7 +165,7 @@ body {
   position: absolute;
   top: 126px;
   left: 76px;
-  background: #9E9E9E;
+  background-color: black;
   border-radius: 50%;
   border: none;
   outline: none;
@@ -186,6 +185,7 @@ body {
   transform: rotate(-45deg);
   margin: 16px auto;
 }
+
 .ico__update:before {
   content: "";
   position: absolute;
@@ -235,17 +235,15 @@ body {
 }
 
 .card_container {
-  width: 40%;
-  height: 40%;
-  position: absolute;
-  top: 320px; 
-  left: 380px;
+  width: auto;
+  height: auto;
   background-color: white;
   opacity: 0.7;
   z-index: 2;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px;
+  position: absolute;
 }
 
 .card_container:hover {
@@ -253,12 +251,14 @@ body {
 }
 
 .card {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   padding: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 200px 250px;
+  grid-template-rows: 30px 100px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
 .img_gift {
