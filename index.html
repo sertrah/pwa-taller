@@ -12,25 +12,34 @@
     <link rel="stylesheet" type="text/css" href="pwa-styles.css" media="all">
     <!-- MANIFIESTO  -->
     <link rel="manifest" href="manifest.json">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="header__title">PWA seven4n</h1>
-        <button id="butRefresh" class="headerButton" aria-label="Refresh"><div class="ico__update"></div></button>
+    <header class="header_text">
+        <p>PWA seven4n</p>
     </header>
-    <section class="vertical-container" hidden>
-        <article>
-            <h1 class="article__title">Mi Progresive Web APP</h1>
-            <img class="img__gift" src="https://media.giphy.com/media/65D9lmbH8Nn8KKQRqR/giphy.gif" alt="">
-            <button onclick="displayNotification()">NOTIFICAR </button>
 
-            <div class="img__gift">
-                <img src="" class="imagen" alt="">
+    <section class="image_background">
+        <img src="./imagenes/landscape.jpg" alt="landscape">
+        <div class="breathing">
+            <p>My Progresive Web APP</p>
+            <button id="butRefresh" class="refresh_button" aria-label="Refresh">
+                <div class="ico__update"></div>
+            </button>
+        </div>
+        <div class="card_container">
+            <div class="card">
+                <img class="img_gift" src="https://media.giphy.com/media/65D9lmbH8Nn8KKQRqR/giphy.gif" alt="">
+                <button onclick="displayNotification()">NOTIFICAR </button>
+                <div class="img__gift">
+                    <img src="" class="imagen" alt="">
+                </div>
+                <div class="id"></div>
+                <div class="mensaje"></div>
             </div>
-            <div class="id"></div>
-            <div class="mensaje"></div>
-        </article>
+        </div>
     </section>
 
     <div class="loader__spinner">
