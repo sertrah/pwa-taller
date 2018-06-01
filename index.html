@@ -1,88 +1,86 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- VIEWPORT  para ser resposive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hola Pwa</title>
-    <!-- mi hoja de estilo-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="pwa-styles.css" media="all">
-    <!-- MANIFIESTO  -->
-    <link rel="manifest" href="manifest.json">
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- VIEWPORT  para ser resposive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hola Pwa</title>
+        <!-- mi hoja de estilo-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="pwa-styles.css" media="all">
+        <!-- MANIFIESTO  -->
+        <link rel="manifest" href="manifest.json">
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+    </head>
 
-<body>
-    <header class="header_text">
-        <p>PWA seven4n</p>
-    </header>
+    <body>
+        <header class="header_text">
+            <p>PWA seven4n</p>
+        </header>
 
-    <section class="image_background">
-        <img src="./imagenes/landscape.jpg" alt="landscape">
-        <div class="breathing">
-            <p>My Progresive Web APP</p>
-            <button id="butRefresh" class="refresh_button" aria-label="Refresh">
-                <div class="ico__update"></div>
-            </button>
-        </div>
-        <div class="card_container">
-            <div class="card">
-                <button onclick="displayNotification()">NOTIFICAR</button>
-                <div class="id"></div>
-                <div class="img__gift">
-                    <img class="img_gift" src="https://media.giphy.com/media/65D9lmbH8Nn8KKQRqR/giphy.gif" alt="">
-                    <img src="" class="imagen" alt="">
-                </div>
-                <div class="mensaje"></div>
+        <section class="image_background">
+            <img src="./imagenes/landscape.jpg" alt="landscape">
+            <div class="breathing">
+                <p>My Progresive Web APP</p>
+                <button id="butRefresh" class="refresh_button" aria-label="Refresh">
+                    <div class="ico__update"></div>
+                </button>
             </div>
+            <div class="card_container">
+                <div class="card">
+                    <button onclick="displayNotification()">NOTIFICAR</button>
+                    <div class="id"></div>
+                    <div class="img__gift">
+                        <img class="img_gift" src="https://media.giphy.com/media/65D9lmbH8Nn8KKQRqR/giphy.gif" alt="">
+                        <img src="" class="imagen" alt="">
+                    </div>
+                    <div class="mensaje"></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="loader__spinner">
+            <svg version="1.1" id="L1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                <circle fill="none" stroke="#616161" stroke-width="6" stroke-miterlimit="15" stroke-dasharray="14.2472,14.2472" cx="50" cy="50"
+                    r="47">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="5s" from="0 50 50" to="360 50 50" repeatCount="indefinite"
+                    />
+                </circle>
+                <circle fill="none" stroke="#616161" stroke-width="1" stroke-miterlimit="10" stroke-dasharray="10,10" cx="50" cy="50" r="39">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="5s" from="0 50 50" to="-360 50 50" repeatCount="indefinite"
+                    />
+                </circle>
+                <g fill="#BDBDBD">
+                    <rect x="30" y="35" width="5" height="30">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.1"
+                        />
+                    </rect>
+                    <rect x="40" y="35" width="5" height="30">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.2"
+                        />
+                    </rect>
+                    <rect x="50" y="35" width="5" height="30">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.3"
+                        />
+                    </rect>
+                    <rect x="60" y="35" width="5" height="30">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.4"
+                        />
+                    </rect>
+                    <rect x="70" y="35" width="5" height="30">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.5"
+                        />
+                    </rect>
+                </g>
+            </svg>
         </div>
-    </section>
+    </body>
 
-    <div class="loader__spinner">
-
-        <svg version="1.1" id="L1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-            <circle fill="none" stroke="#616161" stroke-width="6" stroke-miterlimit="15" stroke-dasharray="14.2472,14.2472" cx="50" cy="50"
-                r="47">
-                <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="5s" from="0 50 50" to="360 50 50" repeatCount="indefinite"
-                />
-            </circle>
-            <circle fill="none" stroke="#616161" stroke-width="1" stroke-miterlimit="10" stroke-dasharray="10,10" cx="50" cy="50" r="39">
-                <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="5s" from="0 50 50" to="-360 50 50" repeatCount="indefinite"
-                />
-            </circle>
-            <g fill="#BDBDBD">
-                <rect x="30" y="35" width="5" height="30">
-                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.1"
-                    />
-                </rect>
-                <rect x="40" y="35" width="5" height="30">
-                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.2"
-                    />
-                </rect>
-                <rect x="50" y="35" width="5" height="30">
-                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.3"
-                    />
-                </rect>
-                <rect x="60" y="35" width="5" height="30">
-                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.4"
-                    />
-                </rect>
-                <rect x="70" y="35" width="5" height="30">
-                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.5"
-                    />
-                </rect>
-            </g>
-        </svg>
-
-    </div>
-</body>
-<script src="app.js"></script>
-<script src="push-notificaciones.js"></script>
-
+    <script src="app.js"></script>
+    <script src="push-notificaciones.js"></script>
 
 </html>

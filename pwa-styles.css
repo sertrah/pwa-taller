@@ -246,7 +246,7 @@ body {
 }
 
 .card_container:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 3px 10px 0 rgba(255,255,255,0.2);
 }
 
 .card {
@@ -263,7 +263,8 @@ body {
   color: white;
   font-family: 'Jua', sans-serif;  
   padding: 5px 15px;
-  border-radius: 20px;  
+  border-radius: 20px; 
+  border: 2px solid white; 
   font-size: 15px;
   cursor: pointer;
 }
@@ -276,6 +277,14 @@ body {
 .img_gift {
   width: 100px;
   height: 100px;
+}
+
+.imagen {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 77px;
+  right: 290px;
 }
 
 @keyframes breathing {
