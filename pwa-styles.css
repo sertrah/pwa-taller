@@ -215,7 +215,7 @@ body {
   background-color: black;
   border-radius: 50%;
   position: absolute;
-  top: 30px;  
+  top: 40px;  
   left: 0;
   right: 0;
   margin-left:auto;
@@ -235,15 +235,14 @@ body {
 }
 
 .card_container {
-  width: auto;
-  height: auto;
-  background-color: white;
-  opacity: 0.7;
-  z-index: 2;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
+  background-color: rgba(255, 255, 255, .3);
   border-radius: 5px;
   position: absolute;
+  top: 310px;
+  left: 0;
+  right: 0;
+  margin: 0px 300px;
+  padding: 20px;
 }
 
 .card_container:hover {
@@ -251,14 +250,27 @@ body {
 }
 
 .card {
-  width: auto;
-  height: auto;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 200px 250px;
-  grid-template-rows: 30px 100px;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Jua', sans-serif;    
+}
+
+.card > button {
+  background-color: black;
+  color: white;
+  font-family: 'Jua', sans-serif;  
+  padding: 5px 15px;
+  border-radius: 20px;  
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.card > div {
+  text-align: center;
+  margin: 8px;
 }
 
 .img_gift {
