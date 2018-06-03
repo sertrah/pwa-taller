@@ -4,7 +4,8 @@ var filesToCache = [
   '/',
   '/index.html',
   '/pwa-styles.css',
-  '/imagenes/giphy.gif'
+  '/imagenes/giphy.gif',
+  '/imagenes/hellscream.gif'
 ];
 
 self.addEventListener('install', function(e) {

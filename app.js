@@ -2,7 +2,7 @@
   'use strict';
   var initChiste = {
     key: '0',
-    mensaje: 'cargando chiste.',
+    mensaje: 'cargando chiste....',
     icon_url: './imagenes/hellscream.gif'
   };
   var initUsuario = {
@@ -41,7 +41,7 @@
           response.json().then(function updateFromCache(json) {
             var results = json;
             results['key'] = json.id;
-            results['mensaje'] = json.value;
+            results['mensaje'] = json.mensaje;
             results['icon_url'] = json.icon_url;
             app.actualizarChisteDom(results);
           });
