@@ -15,25 +15,73 @@
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="header__title">PWA seven4n</h1>
-        <button id="butRefresh" class="headerButton" aria-label="Refresh"><div class="ico__update"></div></button>
+
+    <header class="header_text">
+        <p>PWA seven4n</p>
     </header>
-    <section class="vertical-container" hidden>
-        <article>
-            <h1 class="article__title">Mi Progresive Web APP</h1>
-            <img class="img__gift" src="https://media.giphy.com/media/65D9lmbH8Nn8KKQRqR/giphy.gif" alt="">
-            <button onclick="displayNotification()">NOTIFICAR </button>
+    <div class="row">
+        <div class="user-profile">
+            <div class="Profile">
+                <div class="Img">
+                    <img class="user-img-grande" src="https://cdn2.digitalartsonline.co.uk/cmsdata/slideshow/3513552/polybreno_1500.jpg" />
+                    <div class="overlay">
+                        <span></span>
+                    </div>
+                </div>
+                <center>
 
-            <div class="img__gift">
-                <img src="" class="imagen" alt="">
+                    <div class="box">
+                        <div class="userbox">
+                            <img class="pic" src="./imagenes/s4n_logo.png"></img>
+                        </div>
+                        <p>
+                            <span id="titulo"></span>,
+                            <span class="user"> </span>
+                        </p>
+                    </div>
+
+                </center>
+                <h2>
+                    <span id="nombre"></span>
+                </h2>
+                <ul>
+                    <li>Correo:
+                        <span id="correo"></span>
+                    </li>
+                    <li>Telefono:
+                        <span id="tel"></span>
+                    </li>
+                    <li>Celular:
+                        <span id="cel"></span>
+                    </li>
+                </ul>
+                <button onclick="displayNotification()">NOTIFICAR </button>
+
             </div>
-            <div class="id"></div>
-            <div class="mensaje"></div>
-        </article>
-    </section>
+        </div>
+        <div class="contentido">
+            <section class="vertical-container" hidden>
+                <div class="card__criolla">
+                    <img src="./imagenes/chuck.png" alt="chuck">
+                    <div class="title">
+                        <div class="mensaje"></div>
+                    </div>
+                    <button id="butRefresh" class="headerButton" aria-label="Refresh">
+                        <div class="ico__update"></div>
+                    </button>
+                </div>
+            </section>
+            <section class="agenda" hidden>
+                <textarea name="" id="" cols="30" rows="10"> value</textarea>
+                <ul>
+                    <li>Guardado</li>
+                </ul>
+            </section>
+        </div>
 
-    <div class="loader__spinner">
+    </div>
+
+    <!--     <div class="loader__spinner">
 
         <svg version="1.1" id="L1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
@@ -70,7 +118,7 @@
             </g>
         </svg>
 
-    </div>
+    </div> -->
 </body>
 <script src="app.js"></script>
 <script src="push-notificaciones.js"></script>
