@@ -125,7 +125,7 @@
     request.send();
   };
   app.actualizarChisteDom = function(data) {
-    document.querySelector('.mensaje').textContent = data.value;
+    document.querySelector('.mensaje').textContent = data.mensaje;
     if (app.isLoading) {
       app.container.removeAttribute('hidden');
       app.isLoading = false;
