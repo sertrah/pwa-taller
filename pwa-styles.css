@@ -91,8 +91,9 @@ article {
   right: 0;
   font-family: 'Jua', sans-serif;
   padding: 5px 10px;
+  color: #fff;
   margin: 20px 30px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #fff;
 }
 .card__criolla {
   width: 100%;
