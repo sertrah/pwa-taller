@@ -19,3 +19,10 @@ Selecciona la carpeta donde este tu proyecto y ya esta :D
 ### **[Meggin](https://medium.com/dev-channel/learn-how-to-build-a-pwa-in-under-5-minutes-c860ad406ed)** 😍😍😍
 ### **[Progressive Web Apps Training](https://developers.google.com/web/ilt/pwa/)**
 ### **[Pete LePage](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)**
+
+
+Con ayuda de:
+@teffcode (imagen cargando...)
+@AndresAristizal (imagen cargando...)
+
+gracias por creer ome ome <3. 
